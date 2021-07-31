@@ -1,9 +1,14 @@
 import React from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 const Main = () => {
     return (
         <>
-        {/*isi disini*/}
+            {/*isi disini*/}
+            <Navbar></Navbar>
+
+            <Footer></Footer>
         </>
     )
 }
