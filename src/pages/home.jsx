@@ -284,7 +284,7 @@ const Home = () => {
                 <div className="grid">
                     <a href="#" target="_blank" className="pilih-kategori">
                         <h1 id="ipk">IPK</h1>
-                        <h2 id="range">3.0 - 3.2</h2>
+                        <h2 id="range">3.01 - 3.2</h2>
                         <div className="bunga-title">
                             <br />
                             <h1> Bunga </h1>
@@ -294,7 +294,7 @@ const Home = () => {
                     </a>
                     <a href="#" target="_blank" className="pilih-kategori">
                         <h1 id="ipk">IPK</h1>
-                        <h2 id="range">3.2 - 3.49</h2>
+                        <h2 id="range">3.21 - 3.5</h2>
                         <div className="bunga-title">
                             <br />
                             <h1> Bunga </h1>
@@ -304,7 +304,7 @@ const Home = () => {
                     </a>
                     <a href="#" target="_blank" className="pilih-kategori">
                         <h1 id="ipk">IPK</h1>
-                        <h2 id="range">3.5 - 3.70</h2>
+                        <h2 id="range">3.51 - 3.70</h2>
                         <div className="bunga-title">
                             <br />
                             <h1> Bunga </h1>
