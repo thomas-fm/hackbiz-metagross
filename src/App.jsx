@@ -7,7 +7,6 @@ import { UserContext } from './context/UserContext'
 function App() {
     const { dbUser, setDbUser, setDb } = useContext(UserContext)
     useEffect(() => {
-        setDbUser(null)
         const firstLogin = async () => {
             // define app id
             const REALM_APP_ID = 'hackbizmetagross-rhidl'
