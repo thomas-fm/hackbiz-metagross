@@ -136,11 +136,11 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: 8,
         textAlign: 'center',
         minHeight: 380,
-        paddingTop: 120,
+        padding: '120px 0',
     },
     topElement: {
         textAlign: 'center',
-        marginTop: 100,
+        marginTop: 50,
         width: '100%',
         height: '100%',
     },
@@ -153,7 +153,7 @@ const useStyles = makeStyles((theme) => ({
     },
     bungaSemester: {
         marginTop: 0,
-        marginLeft: 80,
+        textAlign: 'center',
     },
     selectMenu: {
         minWidth: 30,
