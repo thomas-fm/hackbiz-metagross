@@ -74,32 +74,7 @@ const Home = () => {
             await db
                 .collection('users')
                 .insertOne(newUser)
-                .then((res) => {
-                    const newLoan = {
-                        interest: '',
-                        ipk: '',
-                        semester: '1',
-                        username: input.username,
-                    }
-                    const insertStock = async () =>
-                        await db
-                            .collection('loan')
-                            .insertOne(newLoan)
-                            .then(console.log('yes'))
-                            .catch(console.log('yah'))
-
-                    insertStock()
-                    setUser({
-                        username: input.username,
-                        password: input.password,
-                    })
-                    let local = {
-                        username: input.username,
-                        password: input.password,
-                    }
-                    history.push('/dashboard')
-                    // JSON.parse(localStorage.setItem('user', local))
-                })
+                .then((res) => console.log(res))
                 .catch(console.log('error gan'))
 
         insert()
