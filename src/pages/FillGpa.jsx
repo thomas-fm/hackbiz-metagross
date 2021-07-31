@@ -24,7 +24,7 @@ const FillGpa = () => {
                 return 3.5
         }
     }
-    const { user, db } = useContext(UserContext)
+    const { user, db, lulus, setLulus } = useContext(UserContext)
     const classes = useStyles()
     const [input, setInput] = useState({
         pilihanSemester: 1,
@@ -44,6 +44,9 @@ const FillGpa = () => {
             [name]: value,
         })
         console.log(value)
+    }
+    const move = () => {
+        setLulus(true)
     }
     const handleEdit = () => {
         let tmpArray = input.status
@@ -280,6 +283,7 @@ const FillGpa = () => {
                         </Grid>
                     </Grid>
                 )}
+                <button onClick={move}>Bayar</button>
             </div>
         </div>
     )

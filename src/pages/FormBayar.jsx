@@ -105,7 +105,9 @@ const FormBayar = () => {
                             <DialogTitle>Pilih bulan</DialogTitle>
                             <DialogContent>
                                 <form className={classes.container1}>
-                                    <FormControl>
+                                    <FormControl
+                                        className={classes.formControl1}
+                                    >
                                         <InputLabel htmlFor="demo-dialog-native">
                                             Bulan
                                         </InputLabel>

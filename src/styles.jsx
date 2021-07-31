@@ -133,8 +133,8 @@ const useStyles = makeStyles((theme) => ({
         margin: '15px 0',
         minWidth: 120,
         alignItems: 'center',
-        margin: theme.spacing(1),
-        minWidth: 120,
+        // margin: theme.spacing(1),
+        // minWidth: 120,
     },
     bungaGenerator: {
         boxShadow: '0px 0px 3px black',
@@ -199,7 +199,7 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: '10px',
         marginTop: '-100px',
     },
-    formControl: {
+    formControl1: {
         margin: theme.spacing(1),
         minWidth: 120,
     },

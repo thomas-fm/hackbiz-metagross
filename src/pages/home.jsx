@@ -23,7 +23,6 @@ const Home = () => {
         tahun: '',
         img_url: '',
         universitas: '',
-        tahun: '',
     })
     let history = useHistory()
     const handleInputChange = (event) => {
