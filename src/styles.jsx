@@ -93,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'white',
         width: '80%',
         margin: 'auto',
-        minHeight: '700px',
+        minHeight: '650px',
         borderRadius: '6px',
         textAlign: 'center',
     },

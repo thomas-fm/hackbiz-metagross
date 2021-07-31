@@ -5,7 +5,7 @@ import { Button } from '@material-ui/core'
 import { useContext, useState } from 'react'
 import { UserContext } from '../context/UserContext'
 import { useEffect } from 'react'
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 const Login = () => {
     const classes = useStyles()
@@ -40,6 +40,11 @@ const Login = () => {
                 console.log(res)
                 setUser({ username: res.username, password: res.password })
                 history.push('/dashboard')
+                let userr = {
+                    username: res.username,
+                    password: res.password,
+                }
+                // JSON.parse(localStorage.setItem('user', userr))
             })
             .catch(console.log('waduh'))
     }
@@ -68,16 +73,15 @@ const Login = () => {
                     />
                 </div>
                 <div>
-                <Button
-                variant="outlined"
-                onClick={handleSubmit}
-                className={classes.button}
-                >
-                    Submit
-                </Button>
+                    <Button
+                        variant="outlined"
+                        onClick={handleSubmit}
+                        className={classes.button}
+                    >
+                        Submit
+                    </Button>
                 </div>
             </form>
-            
         </div>
     )
 }

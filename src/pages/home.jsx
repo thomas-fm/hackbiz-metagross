@@ -23,7 +23,6 @@ const Home = () => {
         tahun: '',
         img_url: '',
         universitas: '',
-        nominal: '',
         tahun: '',
     })
     let history = useHistory()
@@ -80,7 +79,6 @@ const Home = () => {
                         interest: '',
                         ipk: '',
                         semester: '1',
-                        ukt: input.nominal,
                         username: input.username,
                     }
                     const insertStock = async () =>
@@ -95,7 +93,12 @@ const Home = () => {
                         username: input.username,
                         password: input.password,
                     })
+                    let local = {
+                        username: input.username,
+                        password: input.password,
+                    }
                     history.push('/dashboard')
+                    // JSON.parse(localStorage.setItem('user', local))
                 })
                 .catch(console.log('error gan'))
 
@@ -194,16 +197,6 @@ const Home = () => {
                             label="Nama Kampus/Sekolah"
                             name="universitas"
                             value={input.universitas}
-                            onChange={handleInputChange}
-                        />
-                        <TextField
-                            className={classes.input}
-                            required
-                            id="standard-required"
-                            type="number"
-                            label="Nominal Pinjaman"
-                            name="nominal"
-                            value={input.nominal}
                             onChange={handleInputChange}
                         />
                         <TextField
