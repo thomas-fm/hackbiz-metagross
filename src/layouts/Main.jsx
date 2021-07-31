@@ -7,6 +7,7 @@ import { Switch, Route } from 'react-router-dom'
 import { Container } from '@material-ui/core'
 import useStyles from '../styles'
 import Dashboard from '../pages/Dashboard'
+import Home from '../pages/home'
 
 const Main = () => {
     const classes = useStyles()
@@ -15,18 +16,20 @@ const Main = () => {
             {/*isi disini*/}
             <Appbar />
             <div style={{ paddingTop: '100px' }}>
-            <Container clasName={classes.container}>
-                <Switch>
-                    <Route exact path={'/login'} component={Login} />
-                <Route exact path={'/dashboard'} component={Dashboard} />
-                    <Route exact path={'/'} component={Login} />
-                </Switch>
-
-            </Container>
+                <Container clasName={classes.container}>
+                    <Switch>
+                        <Route exact path={'/login'} component={Login} />
+                        <Route
+                            exact
+                            path={'/dashboard'}
+                            component={Dashboard}
+                        />
+                        <Route exact path={'/'} component={Home} />
+                    </Switch>
+                </Container>
             </div>
-            
-            
-            <Footer/>
+
+            <Footer />
         </>
     )
 }
