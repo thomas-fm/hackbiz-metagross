@@ -105,7 +105,7 @@ const FormBayar = () => {
         setOnFase(true) // set supaya 2 button muncul
         setOpen(false) // set dialog tersembunyi
         setRows(generateRow(bulan)) // set row dari berapa bulan
-
+        setBulanBerapa(1)
         // insert database username dan current periode bayar
         const insertPeriode = async () => {
             await db.collection('periodeBayar').insertOne({
@@ -150,7 +150,8 @@ const FormBayar = () => {
         setBulanBerapa({
             next,
         })
-
+        console.log(rows)
+        console.log(bulanBerapa)
         if (bulanBerapa > berapaLama) {
             // lanjut on next fase
             setOnFase(false)
@@ -176,8 +177,9 @@ const FormBayar = () => {
 
             deleteFunc()
             setRows([])
+            console.log(rows)
         } else {
-            let nextBulan = bulanBerapa + 1
+            let nextBulan = parseInt(bulanBerapa) + 1
             setBulanBerapa(nextBulan)
         }
         // update database periodeBayar menjadi bulan baru
