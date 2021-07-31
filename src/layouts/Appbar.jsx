@@ -12,7 +12,7 @@ const Appbar = () => {
         history.push('/login')
     }
     const handleLogout = () => {
-        // JSON.parse(localStorage.removeItem('user'))
+        localStorage.removeItem('user')
         setUser(null)
         history.push('/')
     }

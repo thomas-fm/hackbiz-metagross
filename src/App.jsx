@@ -4,7 +4,7 @@ import * as Realm from 'realm-web'
 import { UserContext } from './context/UserContext'
 
 function App() {
-    const { dbUser, setDbUser, setDb } = useContext(UserContext)
+    const { user, dbUser, setDbUser, setDb } = useContext(UserContext)
     useEffect(() => {
         const firstLogin = async () => {
             // define app id
@@ -23,6 +23,7 @@ function App() {
             // set database
             const database = realmService.db('Metagross')
             setDb(database)
+            console.log('print on reload')
         }
         if (!dbUser) {
             firstLogin()

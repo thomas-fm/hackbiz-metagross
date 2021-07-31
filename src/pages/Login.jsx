@@ -41,10 +41,10 @@ const Login = () => {
                 setUser({ username: res.username, password: res.password })
                 history.push('/dashboard')
                 let userr = {
-                    username: res.username,
-                    password: res.password,
+                    username: input.username,
+                    password: input.password,
                 }
-                // JSON.parse(localStorage.setItem('user', userr))
+                localStorage.setItem('user', JSON.stringify(userr))
             })
             .catch(console.log('waduh'))
     }

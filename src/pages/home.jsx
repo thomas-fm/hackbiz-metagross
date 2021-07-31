@@ -74,7 +74,16 @@ const Home = () => {
             await db
                 .collection('users')
                 .insertOne(newUser)
-                .then((res) => console.log(res))
+                .then((res) => {
+                    console.log(res)
+                    localStorage.setItem(
+                        'user',
+                        JSON.stringify({
+                            username: input.username,
+                            password: input.password,
+                        }),
+                    )
+                })
                 .catch(console.log('error gan'))
 
         insert()

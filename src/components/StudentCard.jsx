@@ -31,11 +31,11 @@ const CustomCard = () => {
                 })
         }
 
-        if (fetch) {
+        if (fetch && db) {
             fetchData()
+            setFetch(false)
         }
-        setFetch(false)
-    }, [fetch])
+    }, [fetch, db])
     return (
         <>
             <div style={{ flexGrow: 1 }}>
