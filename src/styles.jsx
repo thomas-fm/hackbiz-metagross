@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core'
+import { Style } from '@material-ui/icons'
 
 const useStyles = makeStyles((theme) => ({
     textField: {
@@ -100,6 +101,63 @@ const useStyles = makeStyles((theme) => ({
     submit: {
         marginTop: '25px',
         backgroundColor: '#7CAABF',
+    },
+    formContainer: {
+        margin: 50,
+        boxShadow: '0px 0px 3px black',
+        padding: 50,
+        display: 'flex',
+        flexDirection: 'column',
+        borderRadius: 8,
+    },
+    textField1: {
+        width: '100%',
+    },
+    textField2: {
+        marginTop: 50,
+        width: 150,
+    },
+    uploader: {
+        margin: '50px 50px 50px 0px',
+        width: 180,
+    },
+    submission: {
+        margin: '50px 30px 50px 0px',
+    },
+    formControl: {
+        margin: '15px 0',
+        minWidth: 120,
+        alignItems: 'center',
+        margin: theme.spacing(1),
+        minWidth: 120,
+    },
+    bungaGenerator: {
+        boxShadow: '0px 0px 3px black',
+        borderRadius: 8,
+        textAlign: 'center',
+        minHeight: 380,
+        paddingTop: 120,
+    },
+    topElement: {
+        textAlign: 'center',
+        marginTop: 100,
+        width: '100%',
+        height: '100%',
+    },
+    dropdown: {
+        flexDirection: 'column',
+        display: 'block',
+    },
+    menuaaa: {
+        minWidth: 60,
+    },
+    bungaSemester: {
+        marginTop: 0,
+        marginLeft: 80,
+    },
+    selectMenu: {
+        minWidth: 30,
+        marginRight: 850,
     },
 }))
 
