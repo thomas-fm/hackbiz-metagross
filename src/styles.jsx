@@ -55,7 +55,11 @@ const useStyles = makeStyles((theme) => ({
         margin: '100px 0px 0px 45px',
     },
     div2: {
-        display: 'flex',
+        textAlign: 'center',
+    },
+    upload: {
+        margin: 'auto',
+        marginLeft: '10px',
     },
     divTop: {
         display: 'flex',
@@ -89,7 +93,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: 'white',
         width: '80%',
         margin: 'auto',
-        minHeight: '560px',
+        minHeight: '700px',
         borderRadius: '6px',
         textAlign: 'center',
     },
