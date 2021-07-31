@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: '#ffffff',
         flex: 1,
         display: 'flex',
-        position: 'fixed',
+        // position: 'fixed',
         top: '0px',
     },
     appBarTitle: {
@@ -28,6 +28,12 @@ const useStyles = makeStyles((theme) => ({
     appBarRight: {
         marginLeft: '100px',
     },
+    container: {
+        marginTop: '100px'
+    },
+    ull: {
+        flexDirection: 'column'
+    }
 }))
 
 export default useStyles

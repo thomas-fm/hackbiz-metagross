@@ -5,6 +5,7 @@ import { Button } from '@material-ui/core'
 import { useContext, useState } from 'react'
 import { UserContext } from '../context/UserContext'
 import { useEffect } from 'react'
+import {useHistory} from 'react-router-dom'
 
 const Login = () => {
     const classes = useStyles()
@@ -13,6 +14,8 @@ const Login = () => {
         username: '',
         password: '',
     })
+
+    let history = useHistory()
     const handleChange = (e) => {
         e.preventDefault()
 
@@ -36,12 +39,13 @@ const Login = () => {
             .then((res) => {
                 console.log(res)
                 setUser({ username: res.username, password: res.password })
+                history.push('/dashboard')
             })
             .catch(console.log('waduh'))
     }
     useEffect(() => {}, [])
     return (
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
             <form noValidate>
                 <div className={classes.textField}>
                     <TextField
@@ -63,14 +67,17 @@ const Login = () => {
                         name="password"
                     />
                 </div>
-            </form>
-            <Button
+                <div>
+                <Button
                 variant="outlined"
                 onClick={handleSubmit}
                 className={classes.button}
-            >
-                Submitt
-            </Button>
+                >
+                    Submit
+                </Button>
+                </div>
+            </form>
+            
         </div>
     )
 }

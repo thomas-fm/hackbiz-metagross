@@ -1,7 +1,39 @@
 import { Card, CardContent, Grid, List, ListItem } from '@material-ui/core'
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
+import { UserContext } from '../context/UserContext'
+import useStyles from '../styles'
 
 const CustomCard = () => {
+    const classes = useStyles()
+    const { user, db } = useContext(UserContext)
+    const [info, setInfo] = useState({
+        name: '',
+        universitas: '',
+        tahun: '',
+    })
+    const [fetch, setFetch] = useState(true)
+    useEffect(() => {
+        const fetchData = async () => {
+            await db
+                .collection('users')
+                .findOne({
+                    username: user.username,
+                })
+                .then((res) => {
+                    setInfo({
+                        name: res.nama,
+                        universitas: res.universitas,
+                        tahun: res.tahun,
+                    })
+                    console.log(res)
+                })
+        }
+
+        if (fetch) {
+            fetchData()
+        }
+        setFetch(false)
+    }, [fetch])
     return (
         <>
             <div style={{ flexGrow: 1 }}>
@@ -24,14 +56,12 @@ const CustomCard = () => {
                                     >
                                         Profil
                                     </h3>
-                                    <List>
+                                    <List className={classes.ull}>
+                                        <ListItem>{info.name}</ListItem>
+                                        <ListItem>{info.universitas}</ListItem>
                                         <ListItem>
-                                            Thomas Ferdinand Martin
+                                            Angkatan : {info.tahun}
                                         </ListItem>
-                                        <ListItem>
-                                            Institut Teknologi Bandung
-                                        </ListItem>
-                                        <ListItem>Angkatan : 2019</ListItem>
                                     </List>
                                 </div>
                             </Grid>
