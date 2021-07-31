@@ -40,7 +40,7 @@ const Appbar = () => {
                                 className={classes.appBarLogin}
                                 onClick={handleLogout}
                             >
-                                <strong>Logout</strong>
+                                <strong>Keluar</strong>
                             </Button>
                         ) : (
                             <Button

@@ -162,12 +162,12 @@ const Home = () => {
                                 <FormControlLabel
                                     value="male"
                                     control={<Radio />}
-                                    label="Male"
+                                    label="Laki-laki"
                                 />
                                 <FormControlLabel
                                     value="female"
                                     control={<Radio />}
-                                    label="Female"
+                                    label="Perempuan"
                                     className={classes.gender1}
                                 />
                             </RadioGroup>
