@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     appBarRight: {
         marginLeft: '100px',
     },
-    container: {},
 }))
 
 export default useStyles

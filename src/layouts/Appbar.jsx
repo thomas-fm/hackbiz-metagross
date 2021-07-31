@@ -1,14 +1,9 @@
 import React from 'react'
 import { AppBar, Box, Button, Toolbar, Typography } from '@material-ui/core'
 import useStyles from '../styles'
-import { useHistory } from 'react-router-dom'
 
 const Appbar = () => {
     const classes = useStyles()
-    let history = useHistory()
-    const handleClick = () => {
-        history.push('/login')
-    }
     return (
         <>
             <AppBar className={classes.appBar}>
@@ -28,10 +23,7 @@ const Appbar = () => {
                         <Button className={classes.appBarButton}>
                             <strong>Tentang Kami</strong>
                         </Button>
-                        <Button
-                            className={classes.appBarLogin}
-                            onClick={handleClick}
-                        >
+                        <Button className={classes.appBarLogin}>
                             <strong>Masuk</strong>
                         </Button>
                     </div>
