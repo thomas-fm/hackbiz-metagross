@@ -5,9 +5,8 @@ import Radio from '@material-ui/core/Radio'
 import RadioGroup from '@material-ui/core/RadioGroup'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FormControl from '@material-ui/core/FormControl'
-import FormLabel from '@material-ui/core/FormLabel'
 import Button from '@material-ui/core/Button'
-import Grid from '@material-ui/core/Grid'
+import CloudUploadIcon from '@material-ui/icons/CloudUpload'
 
 const Home = () => {
     const [value, setValue] = React.useState('male')
@@ -33,9 +32,23 @@ const Home = () => {
                 </div>
                 <div className={classes.div} id="div2">
                     <form noValidate className={classes.form}>
-                        <h1 className={classes.h12}>
+                        <h1 className={classes.h12} id="h12">
                             Ajukan pinjamanmu, sekarang juga!
                         </h1>
+                        <TextField
+                            className={classes.input}
+                            required
+                            id="standard-required"
+                            label="Username"
+                        />
+                        <TextField
+                            className={classes.input}
+                            required
+                            id="standard-required"
+                            type="number"
+                            label="Password"
+                            type="password"
+                        />
                         <TextField
                             className={classes.input}
                             required
@@ -87,28 +100,39 @@ const Home = () => {
                             type="number"
                             label="Nominal Pinjaman"
                         />
-                        <h1 className={classes.h12}> Jangka Waktu </h1>
+                        <TextField
+                            className={classes.input}
+                            required
+                            id="standard-required"
+                            type="number"
+                            label="Tahun Masuk"
+                        />
                         <div className={classes.div2}>
-                            <TextField
-                                className={classes.input1}
-                                required
-                                id="standard-required"
-                                type="number"
-                            />
-                            <TextField
-                                className={classes.input1}
-                                required
-                                id="standard-required"
-                                type="number"
-                            />
-                            <TextField
-                                className={classes.input1}
-                                required
-                                id="standard-required"
-                                type="number"
-                            />
+                            <Button
+                                variant="contained"
+                                color="default"
+                                className={classes.upload}
+                                id="upload"
+                                startIcon={<CloudUploadIcon />}
+                            >
+                                Upload Foto
+                            </Button>
+                            <Button
+                                variant="contained"
+                                color="default"
+                                id="upload"
+                                className={classes.upload}
+                                startIcon={<CloudUploadIcon />}
+                            >
+                                Upload KTP
+                            </Button>
                         </div>
-                        <Button variant="contained" className={classes.submit}>
+                        <Button
+                            variant="contained"
+                            color="default"
+                            id="upload"
+                            className={classes.submit}
+                        >
                             Submit
                         </Button>
                     </form>

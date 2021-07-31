@@ -876,3 +876,20 @@ section {
         text-align: center;
     }
 }
+/* ============================================ */
+
+/* ============ CSS FOR UPLOAD BUTTON ============== */
+@media only screen and (max-width: 900px) {
+    #upload {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #h12 {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 1180px) and (min-width: 700px) {
+    #upload {
+        margin-top: 10px;
+    }
+}
