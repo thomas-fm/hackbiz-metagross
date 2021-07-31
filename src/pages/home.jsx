@@ -99,7 +99,7 @@ const Home = () => {
                     <img
                         id="bg-home"
                         className={classes.bghome}
-                        src="../assets/bayarNanti-bg.png"
+                        src="https://res.cloudinary.com/cloudinary-afif/image/upload/v1627758779/bayarnanti-bg_q2sqem.png"
                     />
                     <h1 className={classes.h11} id="slang">
                         Kerja keras dahulu, bayar nanti.
@@ -298,7 +298,10 @@ const Home = () => {
                 <div className="grid-2">
                     <div className="pilih-mitra">
                         <div className="mitra-itb">
-                            <img src="assets/itb.png" id="itb" />
+                            <img
+                                src="https://res.cloudinary.com/cloudinary-afif/image/upload/v1627758778/itb_dqntlm.png"
+                                id="itb"
+                            />
                             <h4 id="itb-name">Institut Teknologi Bandung</h4>
                         </div>
                         <h5 id="itb-loc">Bandung, Jawa Barat</h5>
@@ -311,7 +314,10 @@ const Home = () => {
                     </div>
                     <div className="pilih-mitra">
                         <div className="mitra-ui">
-                            <img src="assets/ui.png" id="ui" />
+                            <img
+                                src="https://res.cloudinary.com/cloudinary-afif/image/upload/v1627758779/ui_b9pto0.png"
+                                id="ui"
+                            />
                             <h4 id="ui-name">Universitas Indonesia</h4>
                         </div>
                         <h5 id="ui-loc">Depok, Jawa Barat</h5>
@@ -324,7 +330,10 @@ const Home = () => {
                     </div>
                     <div className="pilih-mitra">
                         <div className="mitra-ugm">
-                            <img src="assets/ugm.png" id="ugm" />
+                            <img
+                                src="https://res.cloudinary.com/cloudinary-afif/image/upload/v1627758779/ugm_pkn1sz.png"
+                                id="ugm"
+                            />
                             <h4 id="ugm-name">Universitas Gadjah Mada</h4>
                         </div>
                         <h5 id="ugm-loc">Yogyakarta, Jawa Tengah</h5>
@@ -351,7 +360,10 @@ const Home = () => {
                 <div className="grid-2">
                     <div className="list-testimoni">
                         <div className="person1">
-                            <img src="../../assets/person1.png" id="person1" />
+                            <img
+                                src="https://res.cloudinary.com/cloudinary-afif/image/upload/v1627758779/person1_k3kwwn.png"
+                                id="person1"
+                            />
                             <h4 id="person1-name">Merwin Olajuwon</h4>
                         </div>
                         <h5 id="person1-loc">Institut Teknologi Bandung</h5>
@@ -371,7 +383,10 @@ const Home = () => {
                     </div>
                     <div className="list-testimoni">
                         <div className="person2">
-                            <img src="../../assets/person2.png" id="person2" />
+                            <img
+                                src="https://res.cloudinary.com/cloudinary-afif/image/upload/v1627758779/person2_duyzd0.png"
+                                id="person2"
+                            />
                             <h4 id="person2-name">Redho Daffasah</h4>
                         </div>
                         <h5 id="person2-loc">Universitas Indonesia</h5>
@@ -394,7 +409,10 @@ const Home = () => {
                     </div>
                     <div className="list-testimoni">
                         <div className="person3">
-                            <img src="../../assets/person3.png" id="person3" />
+                            <img
+                                src="https://res.cloudinary.com/cloudinary-afif/image/upload/v1627758779/person3_xsj0q5.png"
+                                id="person3"
+                            />
                             <h4 id="person3-name">Thomas FM</h4>
                         </div>
                         <h5 id="person3-loc">Universitas Gadjah Mada</h5>
