@@ -1,9 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Main = () => {
     return (
         <>
-        {/*isi disini*/}
+            {/*isi disini*/}
+            <Navbar></Navbar>
         </>
     )
 }
