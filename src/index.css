@@ -371,3 +371,508 @@ h6 {
 }
 
 /* ========================================= */
+
+/* ===== CSS FOR HOME ===== */
+@media only screen and (max-width: 900px) {
+    #bg-home,
+    #slang {
+        display: none;
+    }
+    #divtop {
+        align-items: center;
+    }
+    #div2 {
+        margin-left: -210px;
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 1180px) and (min-width: 700px) {
+    #bg-home,
+    #slang {
+        display: none;
+    }
+    #divtop {
+        align-items: center;
+    }
+    #div2 {
+        margin-left: -210px;
+        width: 80%;
+    }
+}
+/* ========================================= */
+
+/* =========== CSS FOR DAFTAR BUNGA ================= */
+#bunga {
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+    margin-bottom: -80px;
+}
+.section {
+    align-items: center;
+    text-align: center;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 2rem;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+section {
+    width: 100%;
+}
+.pilihan-kategori {
+    text-align: center;
+    padding: 10rem 2rem;
+}
+.pilihan-kategori a {
+    border-bottom: 5px solid #7caabf;
+    box-shadow: 0px 0px 2px black;
+    border-radius: 10px;
+}
+.pilihan-kategori a:hover {
+    font-weight: 600;
+}
+.pilihan-kategori p {
+    margin-bottom: 10px;
+}
+#range,
+#ipk,
+#bunga-persen {
+    margin-top: 20px;
+}
+#interest {
+    margin-top: 10px;
+}
+.bunga-title {
+    margin-top: 40px;
+    background-color: #7caabf;
+    height: auto;
+}
+@media only screen and (max-width: 900px) {
+    .grid,
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 2rem;
+        width: 70%;
+        max-width: 1280px;
+        margin: -100px auto 0px auto;
+        margin-bottom: 2rem;
+    }
+    #bunga {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
+/* ======================================================== */
+
+/* =============== CSS FOR MITRA SEKOLAH ================== */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 2rem;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+#mitra {
+    margin-top: -100px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 80px;
+}
+#itb-name,
+#ui-name,
+#ugm-name,
+#person1-name,
+#person2-name,
+#person3-name {
+    margin-top: 15px;
+}
+#itb-loc,
+#person1-loc,
+#person2-loc,
+#person3-loc {
+    margin-top: -15px;
+}
+#ui-loc {
+    margin-left: -15px;
+    margin-top: -15px;
+}
+
+#ugm-loc {
+    margin-left: 25px;
+    margin-top: -15px;
+}
+.pilih-mitra,
+.list-testimoni {
+    border: 0px solid;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px black;
+}
+.mitra-itb,
+.mitra-ui,
+.mitra-ugm,
+.person1,
+.person2,
+.person3 {
+    display: flex;
+}
+#itb,
+#ui,
+#ugm,
+#person1,
+#person2,
+#person3 {
+    max-width: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#more-info {
+    text-align: center;
+    background-color: #7caabf;
+    margin-top: 20px;
+    height: 20px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#link-info {
+    font-weight: bold;
+}
+.mitra-button {
+    background-color: #7caabf;
+    border-radius: 5px;
+    padding: 8px;
+    width: 20%;
+    cursor: pointer;
+}
+@media only screen and (max-width: 900px) {
+    #itb-name,
+    #ui-name,
+    #ugm-name,
+    #person1-name,
+    #person2-name,
+    #person3-name {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    #itb-loc,
+    #ui-loc,
+    #ugm-loc,
+    #person1-loc,
+    #person2-loc,
+    #person3-loc {
+        margin-left: 90px;
+        margin-top: -15px;
+        font-size: 10px;
+    }
+    .pilih-mitra {
+        border: 0px solid;
+        border-radius: 8px;
+        box-shadow: 0px 0px 3px black;
+    }
+    .mitra-itb,
+    .mitra-ui,
+    .mitra-ugm,
+    .person1,
+    .person2,
+    .person3 {
+        display: flex;
+    }
+    #itb,
+    #ui,
+    #ugm,
+    #person1,
+    #person2,
+    #person3 {
+        max-width: 50px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    #more-info {
+        text-align: center;
+        background-color: #7caabf;
+        margin-top: 20px;
+        height: 20px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .mitra-button {
+        background-color: #7caabf;
+        border-radius: 5px;
+        padding: 8px;
+        width: 40%;
+        cursor: pointer;
+    }
+    #mitra {
+        margin-bottom: 150px;
+        font-size: 20px;
+    }
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 2rem;
+        width: 70%;
+        max-width: 1280px;
+        margin: -100px auto 0px auto;
+        margin-bottom: 2rem;
+    }
+}
+@media only screen and (max-width: 1180px) and (min-width: 700px) {
+    .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 2rem;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+    #itb-name,
+    #ui-name,
+    #ugm-name {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    #itb-loc,
+    #ui-loc,
+    #ugm-loc {
+        margin-left: 90px;
+        margin-top: -15px;
+        font-size: 10px;
+    }
+    .pilih-mitra {
+        border: 0px solid;
+        border-radius: 8px;
+        box-shadow: 0px 0px 3px black;
+    }
+    .mitra-itb,
+    .mitra-ui,
+    .mitra-ugm {
+        display: flex;
+    }
+    #itb,
+    #ui,
+    #ugm {
+        max-width: 50px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    #more-info {
+        text-align: center;
+        background-color: #7caabf;
+        margin-top: 20px;
+        height: 20px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    .mitra-button {
+        background-color: #7caabf;
+        border-radius: 5px;
+        padding: 8px;
+        width: 20%;
+        cursor: pointer;
+    }
+}
+/* =========================================== */
+
+/* =============== CSS FOR TESTIMONI =============== */
+#info {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+#info-person1,
+#info-person3 {
+    margin-left: 10px;
+    margin-top: 58px;
+    margin-right: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+#info-person2 {
+    margin-left: 10px;
+    margin-top: 25px;
+    margin-right: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+#person1,
+#person2,
+#person3 {
+    max-width: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+#testimoni {
+    margin-top: 100px;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    color: black;
+    margin-bottom: 80px;
+}
+#person1-name,
+#person2-name,
+#person3-name {
+    margin-top: 15px;
+}
+#person1-loc {
+    margin-left: 40px;
+    margin-top: -5px;
+}
+#person2-loc {
+    margin-left: 0px;
+    margin-top: -11px;
+}
+#person3-loc {
+    margin-left: 25px;
+    margin-top: -5px;
+}
+@media only screen and (max-width: 900px) {
+    #person1-name,
+    #person2-name,
+    #person3-name {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    #person1-loc {
+        margin-left: -28px;
+        margin-top: -15px;
+        font-size: 10px;
+    }
+    #person2-loc {
+        margin-left: -55px;
+        margin-top: -15px;
+        font-size: 10px;
+    }
+    #person3-loc {
+        margin-left: -40px;
+        margin-top: -15px;
+        font-size: 10px;
+    }
+    .person1,
+    .person2,
+    .person3 {
+        display: flex;
+    }
+    #person1,
+    #person2,
+    #person3 {
+        max-width: 50px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    #more-info {
+        text-align: center;
+        background-color: #7caabf;
+        margin-top: 20px;
+        height: 20px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    #info-person1,
+    #info-person3 {
+        margin-left: 10px;
+        margin-top: 99px;
+        margin-right: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+    #info-person2 {
+        margin-left: 10px;
+        margin-top: 45px;
+        margin-right: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+    #testimoni {
+        margin-bottom: 150px;
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 1180px) and (min-width: 700px) {
+    #person1-name,
+    #person2-name,
+    #person3-name {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    #person1-loc {
+        margin-left: 30px;
+        margin-top: -15px;
+        font-size: 10px;
+    }
+    #person2-loc {
+        margin-left: 5px;
+        margin-top: -10px;
+        font-size: 10px;
+    }
+    #person3-loc {
+        margin-left: 20px;
+        margin-top: -10px;
+        font-size: 10px;
+    }
+    .person1,
+    .person2,
+    .person3 {
+        display: flex;
+    }
+    #person1,
+    #person2,
+    #person3 {
+        max-width: 50px;
+        margin-left: 20px;
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    #more-info {
+        text-align: center;
+        background-color: #7caabf;
+        margin-top: 20px;
+        height: 20px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+    #info-person1 {
+        margin-left: 10px;
+        margin-top: 105px;
+        margin-right: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+    #info-person3 {
+        margin-left: 10px;
+        margin-top: 99px;
+        margin-right: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+    #info-person2 {
+        margin-left: 10px;
+        margin-top: 67px;
+        margin-right: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+}
