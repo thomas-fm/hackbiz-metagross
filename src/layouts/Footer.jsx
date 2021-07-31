@@ -18,7 +18,10 @@ const Footer = () => {
                                 href="https://twitter.com/bukanridhokun"
                                 id="footer-link"
                             >
-                                <img id="twitter" src="assets/twitter.png" />
+                                <img
+                                    id="twitter"
+                                    src="../../assets/twitter.png"
+                                />
                                 <h4>Twitter</h4>
                             </a>
                         </li>
@@ -27,7 +30,10 @@ const Footer = () => {
                                 href="https://web.facebook.com/ridho.daffasyah/"
                                 id="footer-link"
                             >
-                                <img id="facebook" src="assets/facebook.png" />
+                                <img
+                                    id="facebook"
+                                    src="../../assets/facebook.png"
+                                />
                                 <h4>Facebook</h4>
                             </a>
                         </li>
@@ -38,7 +44,7 @@ const Footer = () => {
                             >
                                 <img
                                     id="instagram"
-                                    src="assets/instagram.png"
+                                    src="../../assets/instagram.png"
                                 />
                                 <h4>Instagram</h4>
                             </a>
