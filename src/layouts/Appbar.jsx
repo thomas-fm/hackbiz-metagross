@@ -20,7 +20,7 @@ const Appbar = () => {
         <>
             <AppBar className={classes.appBar}>
                 <Toolbar>
-                    <div>
+                    <div className={classes.nameApp}>
                         <Typography
                             className={classes.appBarTitle}
                             variant="h6"
@@ -40,7 +40,7 @@ const Appbar = () => {
                                 className={classes.appBarLogin}
                                 onClick={handleLogout}
                             >
-                                <strong>Logout</strong>
+                                <strong>Keluar</strong>
                             </Button>
                         ) : (
                             <Button

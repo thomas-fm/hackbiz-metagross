@@ -16,28 +16,19 @@ const Footer = () => {
                 </div>
                 <ul id="footer-ul">
                     <li>
-                        <a
-                            href="https://twitter.com/bukanridhokun"
-                            id="footer-link"
-                        >
+                        <a href="#" id="footer-link">
                             <TwitterIcon />
                             <h4>Twitter</h4>
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="https://web.facebook.com/ridho.daffasyah/"
-                            id="footer-link"
-                        >
+                        <a href="#" id="footer-link">
                             <FacebookIcon />
                             <h4>Facebook</h4>
                         </a>
                     </li>
                     <li>
-                        <a
-                            href="https://www.instagram.com/ridhodaffasyah/"
-                            id="footer-link"
-                        >
+                        <a href="#" id="footer-link">
                             <InstagramIcon />
                             <h4>Instagram</h4>
                         </a>

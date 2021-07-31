@@ -20,14 +20,14 @@ const useStyles = makeStyles((theme) => ({
         margin: '10px 10px 10px 10px',
     },
     appBarButton: {
-        margin: '10px 10px 10px 10px',
+        margin: '10px 10px 10px 40px',
     },
     appBarLogin: {
         backgroundColor: '#7caabf',
-        margin: '10px 10px 10px 10px',
+        margin: '10px 10px 10px 40px',
     },
     appBarRight: {
-        marginLeft: '100px',
+        marginLeft: '120px',
     },
     container: {
         marginTop: '100px',
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         border: '1px',
         display: 'inline-block',
         width: '45%',
-        margin: '100px 0px 0px 45px',
+        margin: '-50px 0px 0px 45px',
     },
     div2: {
         textAlign: 'center',
@@ -213,6 +213,14 @@ const useStyles = makeStyles((theme) => ({
     baris: {
         textAlign: 'center',
         boxShadow: '0px 0px 1px black',
+    },
+    nameApp: {
+        width: '40vw',
+        position: 'relative',
+        backgroundColor: 'white',
+    },
+    typography: {
+        fontSize: '20px',
     },
 }))
 

@@ -215,9 +215,12 @@ a {
     background-color: #7caabf;
 }
 footer {
+    position: relative;
+    bottom: 0px;
     margin-top: 100px;
     background-color: #7caabf;
     min-height: 100px;
+    width: 100%;
     box-shadow: 0px 0px 2px gray;
 }
 #footer-ul {

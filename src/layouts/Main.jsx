@@ -13,6 +13,7 @@ import { UserContext } from '../context/UserContext'
 const Main = () => {
     const classes = useStyles()
     const { user } = useContext(UserContext)
+
     return (
         <>
             {/*isi disini*/}

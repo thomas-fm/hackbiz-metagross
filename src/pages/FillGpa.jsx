@@ -20,7 +20,7 @@ const FillGpa = () => {
                 return 2.5
             case gpa > 3.0 && gpa <= 3.2:
                 return 3
-            case gpa < 3:
+            case gpa <= 3:
                 return 3.5
         }
     }
@@ -28,29 +28,45 @@ const FillGpa = () => {
     const classes = useStyles()
     const [input, setInput] = useState({
         pilihanSemester: 1,
-        jumlahUkt: 0,
-        ipk: 0,
+        jumlahUktArr: [0, 0, 0, 0, 0, 0, 0, 0],
+        ipkArr: [0, 0, 0, 0, 0, 0, 0, 0],
+        //jumlahUkt: 0,
+        //ipk: 0,
         status: [false, false, false, false, false, false, false, false],
         interest: ['-', '-', '-', '-', '-', '-', '-', '-'],
         first: [true, true, true, true, true, true, true, true],
     })
     // const [fetch, setFetch] = useEffect(true)
     const handleChange = (e) => {
-        let name = e.target.name
-        let value = e.target.value
-
-        setInput({
-            ...input,
-            [name]: value,
-        })
-        console.log(value)
+        console.log(e.target.value)
+        if (e.target.name == 'jumlahUkt') {
+            let tmpArr = input.jumlahUktArr
+            tmpArr[input.pilihanSemester - 1] = e.target.value
+            setInput({
+                ...input,
+                jumlahUktArr: tmpArr,
+            })
+        } else if (e.target.name == 'ipk') {
+            let tmpArr = input.ipkArr
+            tmpArr[input.pilihanSemester - 1] = e.target.value
+            setInput({
+                ...input,
+                ipkArr: tmpArr,
+            })
+        } else {
+            setInput({
+                ...input,
+                pilihanSemester: e.target.value,
+            })
+        }
     }
     const move = () => {
         setLulus(true)
     }
     const handleEdit = () => {
         let tmpArray = input.status
-        tmpArray[input.pilihanSemester] = !tmpArray[input.pilihanSemester]
+        tmpArray[input.pilihanSemester - 1] =
+            !tmpArray[input.pilihanSemester - 1]
         setInput({
             ...input,
             status: tmpArray,
@@ -58,16 +74,17 @@ const FillGpa = () => {
     }
     const handleClick = (e) => {
         let tmpArray = input.status
-        tmpArray[input.pilihanSemester] = !tmpArray[input.pilihanSemester]
+        tmpArray[input.pilihanSemester - 1] =
+            !tmpArray[input.pilihanSemester - 1]
 
         let tmpArray2 = input.interest
-        tmpArray2[input.pilihanSemester] = countInterest(input.ipk)
+        tmpArray2[input.pilihanSemester - 1] = countInterest(input.ipk)
 
         let tmpArray3 = input.first
 
         // insert
-        if (tmpArray3[input.pilihanSemester]) {
-            tmpArray3[input.pilihanSemester] = false
+        if (tmpArray3[input.pilihanSemester - 1]) {
+            tmpArray3[input.pilihanSemester - 1] = false
             setInput({
                 ...input,
                 status: tmpArray,
@@ -77,10 +94,12 @@ const FillGpa = () => {
 
             // pudh to database
             let newLoanData = {
-                interest: countInterest(input.ipk).toString(),
-                ipk: input.ipk.toString(),
+                interest: countInterest(
+                    input.ipkArr[input.pilihanSemester - 1],
+                ).toString(),
+                ipk: input.ipkArr[input.pilihanSemester - 1].toString(),
                 semester: input.pilihanSemester.toString(),
-                ukt: input.jumlahUkt.toString(),
+                ukt: input.jumlahUktArr[input.pilihanSemester - 1].toString(),
                 username: user.username,
             }
 
@@ -105,10 +124,14 @@ const FillGpa = () => {
             }
             let newLoanData = {
                 $set: {
-                    interest: countInterest(input.ipk).toString(),
-                    ipk: input.ipk.toString(),
+                    interest: countInterest(
+                        input.ipkArr[input.pilihanSemester - 1],
+                    ).toString(),
+                    ipk: input.ipkArr[input.pilihanSemester - 1].toString(),
                     semester: input.pilihanSemester.toString(),
-                    ukt: input.jumlahUkt.toString(),
+                    ukt: input.jumlahUktArr[
+                        input.pilihanSemester - 1
+                    ].toString(),
                     username: user.username,
                 },
             }
@@ -192,11 +215,15 @@ const FillGpa = () => {
                                     className={classes.textField1}
                                     label="Jumlah UKT"
                                     name="jumlahUkt"
-                                    value={input.jumlahUkt}
+                                    value={
+                                        input.jumlahUktArr[
+                                            input.pilihanSemester - 1
+                                        ]
+                                    }
                                     onChange={handleChange}
                                     required
                                     disabled={
-                                        input.status[input.pilihanSemester]
+                                        input.status[input.pilihanSemester - 1]
                                     }
                                 />
 
@@ -204,14 +231,16 @@ const FillGpa = () => {
                                     className={classes.textField2}
                                     label="IPK"
                                     name="ipk"
-                                    value={input.ipk}
+                                    value={
+                                        input.ipkArr[input.pilihanSemester - 1]
+                                    }
                                     onChange={handleChange}
                                     required
                                     disabled={
-                                        input.status[input.pilihanSemester]
+                                        input.status[input.pilihanSemester - 1]
                                     }
                                 />
-                                {!input.status[input.pilihanSemester] ? (
+                                {!input.status[input.pilihanSemester - 1] ? (
                                     <Grid
                                         container
                                         direction="row"
@@ -219,14 +248,24 @@ const FillGpa = () => {
                                         alignItems="center"
                                     >
                                         <Grid item xs={3}>
-                                            <Button
-                                                variant="contained"
-                                                color="primary"
-                                                component="span"
-                                                className={classes.uploader}
-                                            >
-                                                Upload Bukti IPK
-                                            </Button>
+                                            <input
+                                                accept="image/*"
+                                                className={classes.input}
+                                                id="contained-button-file"
+                                                multiple
+                                                type="file"
+                                                hidden
+                                            />
+                                            <label htmlFor="contained-button-file">
+                                                <Button
+                                                    variant="contained"
+                                                    color="primary"
+                                                    component="span"
+                                                    className={classes.uploader}
+                                                >
+                                                    Upload Bukti IPK
+                                                </Button>
+                                            </label>
                                         </Grid>
 
                                         <Grid item xs={3}>
@@ -253,7 +292,7 @@ const FillGpa = () => {
                             </div>
                         </Grid>
                         <Grid item xs={3} className={classes.bungaGenerator}>
-                            {input.status[input.pilihanSemester] ? (
+                            {input.status[input.pilihanSemester - 1] ? (
                                 <div style={{ verticalAlign: 'center' }}>
                                     <Typography
                                         variant="h6"
@@ -263,7 +302,12 @@ const FillGpa = () => {
                                         Bunga Semester {input.pilihanSemester}
                                     </Typography>
                                     <Typography variant="h1" component="h2">
-                                        {countInterest(input.ipk)}%
+                                        {countInterest(
+                                            input.ipkArr[
+                                                input.pilihanSemester - 1
+                                            ],
+                                        )}
+                                        %
                                     </Typography>
                                 </div>
                             ) : (
@@ -283,7 +327,23 @@ const FillGpa = () => {
                         </Grid>
                     </Grid>
                 )}
-                <button onClick={move}>Bayar</button>
+                {input.status[0] &&
+                    input.status[1] &&
+                    input.status[2] &&
+                    input.status[3] &&
+                    input.status[4] &&
+                    input.status[5] &&
+                    input.status[6] &&
+                    input.status[7] && (
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={move}
+                            style={{ marginRight: '500px' }}
+                        >
+                            Bayar
+                        </Button>
+                    )}
             </div>
         </div>
     )

@@ -9,6 +9,7 @@ const Dashboard = () => {
     useEffect(() => {}, [lulus])
     return (
         <div>
+            <title>Edurang</title>
             <CustomCard />
             {(lulus && <FormBayar />) || (!lulus && <FillGpa />)}
         </div>
