@@ -58,6 +58,11 @@ const useStyles = makeStyles((theme) => ({
     div2: {
         textAlign: 'center',
     },
+    div3: {
+        marginTop: '20px',
+        textAlign: 'center',
+        marginLeft: '-10px',
+    },
     upload: {
         margin: 'auto',
         marginLeft: '10px',
@@ -158,6 +163,56 @@ const useStyles = makeStyles((theme) => ({
     selectMenu: {
         minWidth: 30,
         marginRight: 850,
+    },
+    phase: {
+        boxShadow: '0px 0px 3px black',
+        display: 'flex',
+        width: '100%',
+        justifyContent: 'space-around',
+        marginTop: '50px',
+    },
+    subPhase: {
+        width: '45%',
+    },
+    titlePhase: {
+        marginLeft: '50px',
+    },
+    tablePhase: {
+        width: '45%',
+        textAlign: 'center',
+        marginTop: '40px',
+    },
+    month: {
+        marginTop: '100px',
+        backgroundColor: '#7CAABF',
+        borderRadius: '8px',
+    },
+    formPhase: {
+        boxShadow: '0px 0px 3px black',
+        borderRadius: '10px',
+        textAlign: 'center',
+        marginTop: '50px',
+        marginBottom: '50px',
+        minHeight: '300px',
+    },
+    formDialog: {
+        maxHeight: '10px',
+        marginTop: '-100px',
+    },
+    formControl: {
+        margin: theme.spacing(1),
+        minWidth: 120,
+    },
+    container1: {
+        display: 'flex',
+        flexWrap: 'wrap',
+    },
+    table: {
+        borderRadius: '8px',
+    },
+    baris: {
+        textAlign: 'center',
+        boxShadow: '0px 0px 1px black',
     },
 }))
 

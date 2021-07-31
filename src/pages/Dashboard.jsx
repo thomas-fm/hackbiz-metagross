@@ -1,12 +1,12 @@
 import React from 'react'
 import CustomCard from '../components/StudentCard'
-import FillGpa from './FillGpa'
+import FormBayar from '../pages/FormBayar'
 
 const Dashboard = () => {
     return (
         <div>
             <CustomCard />
-            <FillGpa />
+            <FormBayar></FormBayar>
         </div>
     )
 }

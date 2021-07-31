@@ -9,7 +9,7 @@ const Footer = () => {
             <div id="page-wrapper-footer">
                 <div id="logo-footer">
                     <div href="#" id="title-footer">
-                        BayarNanti
+                        Edurang
                         <h6> Bandung, Jawa Barat </h6>
                         <h6> 0852-1496-8412 </h6>
                     </div>
