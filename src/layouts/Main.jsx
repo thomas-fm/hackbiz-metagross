@@ -16,7 +16,7 @@ const Main = () => {
             {/*isi disini*/}
             <Appbar />
             <div style={{ paddingTop: '100px' }}>
-                <Container clasName={classes.container}>
+                <Container className={classes.container}>
                     <Switch>
                         <Route exact path={'/login'} component={Login} />
                         <Route

@@ -10,6 +10,7 @@ const CustomCard = () => {
         name: '',
         universitas: '',
         tahun: '',
+        img_url: '',
     })
     const [fetch, setFetch] = useState(true)
     useEffect(() => {
@@ -24,6 +25,7 @@ const CustomCard = () => {
                         name: res.nama,
                         universitas: res.universitas,
                         tahun: res.tahun,
+                        img_url: res.img_url,
                     })
                     console.log(res)
                 })
@@ -66,7 +68,7 @@ const CustomCard = () => {
                                 </div>
                             </Grid>
                             <Grid item>
-                                <div>Ini foto</div>
+                                <img src={info.img_url} alt="Foto siswa" />
                             </Grid>
                         </Grid>
                     </CardContent>
