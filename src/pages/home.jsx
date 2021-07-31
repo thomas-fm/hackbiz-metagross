@@ -11,7 +11,6 @@ import Grid from '@material-ui/core/Grid'
 
 const Home = () => {
     const [value, setValue] = React.useState('male')
-
     const handleChange = (event) => {
         setValue(event.target.value)
     }
