@@ -1,5 +1,4 @@
 import React, { useEffect, useContext } from 'react'
-import './App.css'
 import Main from './layouts/Main'
 import * as Realm from 'realm-web'
 import { UserContext } from './context/UserContext'
