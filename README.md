@@ -4,7 +4,7 @@
 * Thomas Ferdinand Martin
 * Ridho Daffasyah
 * Muhammad Erwin Fattah
-* ## Product Description
+## Product Description
 Platform where students can apply for loan and reimburse when they graduate college. Loan interest will depend on student performance (GPA). Payment bill will be divided into several billing phases according to the number of semesters taken. In each phase, students can choose a payment period to complete the payment.
 ## Customer Journeys
 1. Register
