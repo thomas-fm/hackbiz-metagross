@@ -1,4 +1,7 @@
 import React from 'react'
+import FacebookIcon from '@material-ui/icons/Facebook'
+import TwitterIcon from '@material-ui/icons/Twitter'
+import InstagramIcon from '@material-ui/icons/Instagram'
 
 const Footer = () => {
     return (
@@ -17,7 +20,7 @@ const Footer = () => {
                             href="https://twitter.com/bukanridhokun"
                             id="footer-link"
                         >
-                            <img id="twitter" src="../../assets/twitter.png" />
+                            <TwitterIcon />
                             <h4>Twitter</h4>
                         </a>
                     </li>
@@ -26,10 +29,7 @@ const Footer = () => {
                             href="https://web.facebook.com/ridho.daffasyah/"
                             id="footer-link"
                         >
-                            <img
-                                id="facebook"
-                                src="../../assets/facebook.png"
-                            />
+                            <FacebookIcon />
                             <h4>Facebook</h4>
                         </a>
                     </li>
@@ -38,10 +38,7 @@ const Footer = () => {
                             href="https://www.instagram.com/ridhodaffasyah/"
                             id="footer-link"
                         >
-                            <img
-                                id="instagram"
-                                src="../../assets/instagram.png"
-                            />
+                            <InstagramIcon />
                             <h4>Instagram</h4>
                         </a>
                     </li>
