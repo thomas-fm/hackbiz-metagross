@@ -8,6 +8,8 @@ import FormControl from '@material-ui/core/FormControl'
 import Button from '@material-ui/core/Button'
 import CloudUploadIcon from '@material-ui/icons/CloudUpload'
 import axios from 'axios'
+import Popover from '@material-ui/core/Popover'
+import Typography from '@material-ui/core/Typography'
 import { InputTwoTone } from '@material-ui/icons'
 import { UserContext } from '../context/UserContext'
 import { useHistory } from 'react-router-dom'
@@ -87,6 +89,18 @@ const Home = () => {
 
         insert()
     }
+    const [anchorEl, setAnchorEl] = React.useState(null)
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget)
+    }
+
+    const handleClose = () => {
+        setAnchorEl(null)
+    }
+
+    const open = Boolean(anchorEl)
+    const id = open ? 'simple-popover' : undefined
     const classes = useStyle()
     return (
         <>
@@ -240,10 +254,28 @@ const Home = () => {
                             color="default"
                             id="upload"
                             className={classes.submit}
-                            onClick={handleSubmit}
+                            onClick={(handleSubmit, handleClick)}
                         >
                             Submit
                         </Button>
+                        <Popover
+                            id={id}
+                            open={open}
+                            anchorEl={anchorEl}
+                            onClose={handleClose}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'center',
+                            }}
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'center',
+                            }}
+                        >
+                            <Typography className={classes.typography}>
+                                Anda telah terdaftar!
+                            </Typography>
+                        </Popover>
                     </form>
                 </div>
             </div>

@@ -219,6 +219,9 @@ const useStyles = makeStyles((theme) => ({
         position: 'relative',
         backgroundColor: 'white',
     },
+    typography: {
+        fontSize: '20px',
+    },
 }))
 
 export default useStyles
