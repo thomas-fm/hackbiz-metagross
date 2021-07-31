@@ -20,7 +20,7 @@ const Appbar = () => {
         <>
             <AppBar className={classes.appBar}>
                 <Toolbar>
-                    <div>
+                    <div className={classes.nameApp}>
                         <Typography
                             className={classes.appBarTitle}
                             variant="h6"
